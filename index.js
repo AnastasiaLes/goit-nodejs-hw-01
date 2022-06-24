@@ -1,8 +1,5 @@
 const contacts = require("./db");
 const { program } = require("commander");
-// const yargs = require("yargs");
-// const { hideBin } = require("yargs/helpers");
-// const argv = require('yargs').argv;
 
 
 const invokeAction = async({ action, id, name, email, phone }) => {
@@ -43,23 +40,6 @@ program.parse();
 
 const options = program.opts();
 invokeAction(options);
-
-// const arr = hideBin(process.argv);
-// const { argv } = yargs(arr);
-// invokeAction(argv);
-
-// invokeAction({ action: "list" });
-// invokeAction({action: "get", id: "4"});
-// invokeAction({action: "add", name: "Anna", email: "aa@yahoo.com", phone: "333333333"});
-// invokeAction({action: "remove", id: "4"});
-
-
-// const actionIndex = process.argv.indexOf("--action");
-// if (actionIndex !== -1) {
-//   const action = process.argv[actionIndex + 1];
-//   invokeAction({ action });
-// }
-// console.log(process.argv);
 
 
 

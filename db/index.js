@@ -28,12 +28,10 @@ const addNewContact = async (name, email, phone) => {
     };
     contacts.push(newContact);
     updateContacts(contacts);
-    // await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
     return newContact;
 }
 
 const removeContact = async (id) => {
-    // const contactToRemove = getById(id);
     const contacts = await listContacts();
     const idx = contacts.findIndex(item => item.id === id);
     if (idx === -1) {
